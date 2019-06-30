@@ -239,7 +239,7 @@
       if (triggered) {
         break;
       } else {
-        if (traverse === document ||
+        if (traverse.nodeType === window.Node.DOCUMENT_NODE ||
           (shadowRootAvailable && (traverse instanceof window.ShadowRoot)) ||
           (parent && parent.__redom_mounted)
         ) {
